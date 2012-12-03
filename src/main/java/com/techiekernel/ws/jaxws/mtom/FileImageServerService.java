@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.1
  * 
  */
-@WebServiceClient(name = "FileImageServerService", targetNamespace = "http://mtom.jaxws.ws.techiekernel.com/", wsdlLocation = "http://localhost:8080/webservice-JAX-WS-Web-Metro/fileImageServer?wsdl")
+@WebServiceClient(name = "FileImageServerService", targetNamespace = "http://mtom.jaxws.ws.techiekernel.com/", wsdlLocation = "http://localhost:8080/webservice-JAX-WS-handler/fileImageServer?wsdl")
 public class FileImageServerService
     extends Service
 {
@@ -30,9 +30,9 @@ public class FileImageServerService
         try {
             URL baseUrl;
             baseUrl = com.techiekernel.ws.jaxws.mtom.FileImageServerService.class.getResource(".");
-            url = new URL(baseUrl, "http://localhost:8080/webservice-JAX-WS-Web-Metro/fileImageServer?wsdl");
+            url = new URL(baseUrl, "http://localhost:8080/webservice-JAX-WS-handler/fileImageServer?wsdl");
         } catch (MalformedURLException e) {
-            logger.warning("Failed to create URL for the wsdl Location: 'http://localhost:8080/webservice-JAX-WS-Web-Metro/fileImageServer?wsdl', retrying as a local file");
+            logger.warning("Failed to create URL for the wsdl Location: 'http://localhost:8080/webservice-JAX-WS-handler/fileImageServer?wsdl', retrying as a local file");
             logger.warning(e.getMessage());
         }
         FILEIMAGESERVERSERVICE_WSDL_LOCATION = url;

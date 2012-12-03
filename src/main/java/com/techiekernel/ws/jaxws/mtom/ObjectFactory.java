@@ -37,6 +37,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link UploadImageResponse }
+     * 
+     */
+    public UploadImageResponse createUploadImageResponse() {
+        return new UploadImageResponse();
+    }
+
+    /**
      * Create an instance of {@link DownloadImage }
      * 
      */
@@ -50,14 +58,6 @@ public class ObjectFactory {
      */
     public UploadImage createUploadImage() {
         return new UploadImage();
-    }
-
-    /**
-     * Create an instance of {@link UploadImageResponse }
-     * 
-     */
-    public UploadImageResponse createUploadImageResponse() {
-        return new UploadImageResponse();
     }
 
     /**

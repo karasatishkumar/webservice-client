@@ -25,20 +25,6 @@ public interface FileImageServer {
 
     /**
      * 
-     * @param arg0
-     * @return
-     *     returns byte[]
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "downloadImage", targetNamespace = "http://mtom.jaxws.ws.techiekernel.com/", className = "com.techiekernel.ws.jaxws.mtom.DownloadImage")
-    @ResponseWrapper(localName = "downloadImageResponse", targetNamespace = "http://mtom.jaxws.ws.techiekernel.com/", className = "com.techiekernel.ws.jaxws.mtom.DownloadImageResponse")
-    public byte[] downloadImage(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
-
-    /**
-     * 
      * @param arg1
      * @param arg0
      * @return
@@ -53,5 +39,19 @@ public interface FileImageServer {
         byte[] arg0,
         @WebParam(name = "arg1", targetNamespace = "")
         String arg1);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns byte[]
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "downloadImage", targetNamespace = "http://mtom.jaxws.ws.techiekernel.com/", className = "com.techiekernel.ws.jaxws.mtom.DownloadImage")
+    @ResponseWrapper(localName = "downloadImageResponse", targetNamespace = "http://mtom.jaxws.ws.techiekernel.com/", className = "com.techiekernel.ws.jaxws.mtom.DownloadImageResponse")
+    public byte[] downloadImage(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
 
 }

@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.1
  * 
  */
-@WebServiceClient(name = "FooBarImplService", targetNamespace = "http://rpc.jaxws.ws.techiekernel.com/", wsdlLocation = "http://localhost:8080/webservice-JAX-WS-Web-Metro/foobarRPC?wsdl")
+@WebServiceClient(name = "FooBarImplService", targetNamespace = "http://rpc.jaxws.ws.techiekernel.com/", wsdlLocation = "http://localhost:8080/webservice-JAX-WS-handler/foobarRPC?wsdl")
 public class FooBarImplService
     extends Service
 {
@@ -30,9 +30,9 @@ public class FooBarImplService
         try {
             URL baseUrl;
             baseUrl = com.techiekernel.ws.jaxws.rpc.FooBarImplService.class.getResource(".");
-            url = new URL(baseUrl, "http://localhost:8080/webservice-JAX-WS-Web-Metro/foobarRPC?wsdl");
+            url = new URL(baseUrl, "http://localhost:8080/webservice-JAX-WS-handler/foobarRPC?wsdl");
         } catch (MalformedURLException e) {
-            logger.warning("Failed to create URL for the wsdl Location: 'http://localhost:8080/webservice-JAX-WS-Web-Metro/foobarRPC?wsdl', retrying as a local file");
+            logger.warning("Failed to create URL for the wsdl Location: 'http://localhost:8080/webservice-JAX-WS-handler/foobarRPC?wsdl', retrying as a local file");
             logger.warning(e.getMessage());
         }
         FOOBARIMPLSERVICE_WSDL_LOCATION = url;

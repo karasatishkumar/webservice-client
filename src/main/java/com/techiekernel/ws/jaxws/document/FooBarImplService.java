@@ -4,11 +4,13 @@ package com.techiekernel.ws.jaxws.document;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.logging.Logger;
+
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 import javax.xml.ws.WebEndpoint;
 import javax.xml.ws.WebServiceClient;
 import javax.xml.ws.WebServiceFeature;
+import javax.jws.HandlerChain;
 
 
 /**
@@ -17,7 +19,8 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.1
  * 
  */
-@WebServiceClient(name = "FooBarImplService", targetNamespace = "http://document.jaxws.ws.techiekernel.com/", wsdlLocation = "http://localhost:8080/webservice-JAX-WS-Web-Metro/foobar?wsdl")
+@WebServiceClient(name = "FooBarImplService", targetNamespace = "http://document.jaxws.ws.techiekernel.com/", wsdlLocation = "http://localhost:8080/webservice-JAX-WS-handler/foobar?wsdl")
+@HandlerChain(file="handler.xml")
 public class FooBarImplService
     extends Service
 {
@@ -30,9 +33,9 @@ public class FooBarImplService
         try {
             URL baseUrl;
             baseUrl = com.techiekernel.ws.jaxws.document.FooBarImplService.class.getResource(".");
-            url = new URL(baseUrl, "http://localhost:8080/webservice-JAX-WS-Web-Metro/foobar?wsdl");
+            url = new URL(baseUrl, "http://localhost:8080/webservice-JAX-WS-handler/foobar?wsdl");
         } catch (MalformedURLException e) {
-            logger.warning("Failed to create URL for the wsdl Location: 'http://localhost:8080/webservice-JAX-WS-Web-Metro/foobar?wsdl', retrying as a local file");
+            logger.warning("Failed to create URL for the wsdl Location: 'http://localhost:8080/webservice-JAX-WS-handler/foobar?wsdl', retrying as a local file");
             logger.warning(e.getMessage());
         }
         FOOBARIMPLSERVICE_WSDL_LOCATION = url;

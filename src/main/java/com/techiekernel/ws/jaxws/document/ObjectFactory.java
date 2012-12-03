@@ -37,14 +37,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetServerDetailResponse }
-     * 
-     */
-    public GetServerDetailResponse createGetServerDetailResponse() {
-        return new GetServerDetailResponse();
-    }
-
-    /**
      * Create an instance of {@link Server }
      * 
      */
@@ -53,11 +45,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CallFooBar }
+     * Create an instance of {@link GetServerDetail }
      * 
      */
-    public CallFooBar createCallFooBar() {
-        return new CallFooBar();
+    public GetServerDetail createGetServerDetail() {
+        return new GetServerDetail();
+    }
+
+    /**
+     * Create an instance of {@link GetServerDetailResponse }
+     * 
+     */
+    public GetServerDetailResponse createGetServerDetailResponse() {
+        return new GetServerDetailResponse();
     }
 
     /**
@@ -69,11 +69,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetServerDetail }
+     * Create an instance of {@link CallFooBar }
      * 
      */
-    public GetServerDetail createGetServerDetail() {
-        return new GetServerDetail();
+    public CallFooBar createCallFooBar() {
+        return new CallFooBar();
     }
 
     /**
